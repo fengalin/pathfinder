@@ -57,6 +57,7 @@ pub trait Window {
     }
 }
 
+#[derive(Debug)]
 pub enum Event {
     Quit,
     WindowResized(WindowSize),
@@ -78,7 +79,7 @@ pub enum Event {
     },
 }
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Debug)]
 pub enum Keycode {
     Alphanumeric(u8),
     Escape,
@@ -113,7 +114,7 @@ pub struct OcularTransform {
     pub modelview_to_eye: Transform4F,
 }
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub enum SVGPath {
     Default,
     Resource(String),

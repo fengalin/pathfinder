@@ -38,12 +38,12 @@ path = "../../resources"
 path = "../../simd"
 
 [dependencies.surfman]
-git = "https://github.com/pcwalton/surfman"
-rev = "616b9e020585dd650120fb1e6cceb0e2bb43199a"
+git = "https://github.com/fengalin/surfman"
+branch = "update_winit_0_22"
 features = ["sm-winit"]
 
 [dependencies.winit]
-version = "<0.19.4" # 0.19.4 causes build errors https://github.com/rust-windowing/winit/pull/1105
+version = "0.22"
 
 [target.'cfg(target_os = "macos")'.dependencies]
 foreign-types = "0.3"
